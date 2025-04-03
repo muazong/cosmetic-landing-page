@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import 'primeicons/primeicons.css';
 
+:root {
+  --nav-height: 56px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -10,14 +14,25 @@
 
 body {
   font-family: 'Inter', sans-serif;
-  width: 100%;
 }
 
-.container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+body.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
+
+.component-container {
+  width: 100%;
+
+  .title {
+    font-size: 2rem;
+    text-align: center;
+  }
+}
+
+.section {
+  max-width: 1280px;
+  margin: 0 auto;
 }
 
 a {

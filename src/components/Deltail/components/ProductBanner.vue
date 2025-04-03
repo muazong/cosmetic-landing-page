@@ -1,44 +1,40 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import BuyButton from './BuyButton.vue'
+</script>
 
 <template>
-  <section id="product-banner">
-    <div class="product-banner-container">
+  <div class="product-banner-container detail-component">
+    <section class="section product-banner">
       <div class="information">
-        <h1>BỘT LÀM SÁNG DA VITABRID C12</h1>
-        <p>
+        <h1 class="title">BỘT LÀM SÁNG DA VITABRID C12</h1>
+        <p class="subtitle">
           Bí quyết dưỡng da trắng sáng, căng mịn, làm mờ thâm nám, đẩy lùi các dấu hiệu lão hoá.
         </p>
 
-        <button class="buy-btn">
-          <i class="pi pi-shopping-bag"></i>
-          <p>ĐẶT MUA</p>
-        </button>
+        <BuyButton />
       </div>
 
       <img src="@/assets/images/surprised-woman.png" alt="Surprised woman" />
-    </div>
-  </section>
+    </section>
+  </div>
 </template>
 
 <style scoped>
-#product-banner {
-  width: 100%;
-  height: 64vh;
-  padding: 0 40px;
+.product-banner-container {
   background: linear-gradient(45deg, #008c6c, #feb47b);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.product-banner-container {
-  max-width: 1200px;
+.product-banner {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
 
   img {
     height: 430px;
+    margin-top: -80px;
   }
 
   .information {
@@ -50,49 +46,22 @@
     text-align: center;
     gap: 20px;
     color: #fff;
+  }
+}
 
-    .buy-btn {
-      height: 50px;
-      width: 120px;
-      background-color: transparent;
-      border: 2px solid #ffffff;
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: space-evenly;
-      cursor: pointer;
-      color: #ffffff;
-      position: relative;
-
-      &:hover {
-        animation: shake 0.8s ease-in-out;
-      }
-
-      p {
-        font-weight: bold;
-      }
+@media (max-width: 768px) {
+  .product-banner {
+    img {
+      display: none;
     }
   }
 }
 
-@keyframes shake {
-  0% {
-    transform: translateX(0);
-  }
-  20% {
-    transform: translateX(-7px);
-  }
-  40% {
-    transform: translateX(7px);
-  }
-  60% {
-    transform: translateX(-7px);
-  }
-  80% {
-    transform: translateX(7px);
-  }
-  100% {
-    transform: translateX(0);
+@media (min-width: 768px) and (max-width: 1024px) {
+  .product-banner {
+    img {
+      height: 300px;
+    }
   }
 }
 </style>

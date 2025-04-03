@@ -1,106 +1,107 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import BuyButton from './Deltail/components/BuyButton.vue'
+</script>
 
 <template>
-  <section id="home">
-    <div class="home-container">
-      <div class="information">
-        <h2>BỘT LÀM SÁNG DA</h2>
-        <h1>VITABRID C12</h1>
-        <p>
+  <div id="home" class="component-container home-container">
+    <section class="home section">
+      <div class="home-product-info">
+        <h2 class="sub-title">BỘT LÀM SÁNG DA</h2>
+        <h1 class="main-title">VITABRID C12</h1>
+
+        <p class="text">
           Công nghệ lớp khoáng kép LDH độc quyền của Huyndai Bioscience kết hợp với Vitamin C và
           nhiều loại dưỡng chất. Giúp dưỡng da trắng sáng, căng mịn, làm mờ thâm nám, đẩy lùi các
           dấu hiệu lão hoá.
         </p>
 
-        <button class="buy-btn">
-          <i class="pi pi-shopping-bag"></i>
-          <p>ĐẶT MUA</p>
-        </button>
+        <BuyButton />
       </div>
-      <img class="banner" src="@/assets/images/banner-1.png" alt="banner" />
-    </div>
+
+      <img class="home-product-img" src="@/assets/images/banner-1.png" alt="Vitabrid c12" />
+    </section>
 
     <div class="scroll-mouse">
       <img src="@/assets/gifs/scrolling_mousewheel-1.gif" alt="mouse scrolling" />
     </div>
-  </section>
+  </div>
 </template>
 
 <style scoped>
-#home {
-  height: 100vh;
-  width: 100%;
-  background: linear-gradient(45deg, #008c6c, #feb47b);
+.home-container {
+  height: auto;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+
   overflow: hidden;
-  padding: 120px;
+  background: linear-gradient(45deg, #008c6c, #feb47b);
   position: relative;
 }
 
-.home-container {
-  margin-top: 180px;
-  height: 100%;
+.home {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-  position: relative;
-}
+  justify-content: center;
+  padding: 0 40px;
 
-.information {
-  color: #ffffff;
-  max-width: 550px;
+  .home-product-info {
+    color: #ffffff;
+    max-width: 550px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 
-  & > * {
-    margin: 20px 0;
+    .main-title {
+      font-size: 4rem;
+      margin: 20px 0;
+    }
+    .sub-title {
+      font-size: 2.5rem;
+    }
+    .text {
+      text-align: justify;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .buy-btn {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+
+      margin-top: 20px;
+      background-color: transparent;
+      border-radius: 12px;
+      border: 2px solid #ffffff;
+      color: #ffffff;
+      height: 50px;
+      position: relative;
+      width: 120px;
+
+      &:hover {
+        animation: shake 0.8s ease-in-out;
+        cursor: pointer;
+      }
+
+      p {
+        font-weight: bold;
+      }
+    }
   }
 
-  h1 {
-    font-size: 4rem;
+  .home-product-img {
+    height: 600px;
+    margin-top: 100px;
+    margin-right: -100px;
   }
-
-  h2 {
-    font-size: 2.5rem;
-  }
-
-  p {
-    text-align: justify;
-    font-size: 14px;
-    line-height: 1.5;
-  }
-}
-
-.buy-btn {
-  height: 50px;
-  width: 120px;
-  background-color: transparent;
-  border: 2px solid #ffffff;
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  cursor: pointer;
-  color: #ffffff;
-  position: relative;
-
-  &:hover {
-    animation: shake 0.8s ease-in-out;
-  }
-
-  p {
-    font-weight: bold;
-  }
-}
-
-.banner {
-  width: 100%;
 }
 
 .scroll-mouse {
-  display: absolute;
-  bottom: 0;
+  position: absolute;
+  bottom: 30px;
 
   img {
     height: 56px;
@@ -108,24 +109,62 @@
   }
 }
 
-@keyframes shake {
-  0% {
-    transform: translateX(0);
+@media (max-width: 768px) {
+  .home {
+    flex-direction: column-reverse;
+
+    .home-product-info {
+      align-items: center;
+
+      .main-title {
+        font-size: 2rem;
+        margin: 16px 0;
+      }
+      .sub-title {
+        font-size: 1rem;
+      }
+      .text {
+        text-align: center;
+        font-size: 15px;
+        line-height: 1.5;
+      }
+    }
+
+    .home-product-img {
+      margin-top: 20px;
+      height: 300px;
+      margin-right: unset;
+    }
   }
-  20% {
-    transform: translateX(-7px);
+
+  .scroll-mouse {
+    display: none;
   }
-  40% {
-    transform: translateX(7px);
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .home {
+    .home-product-info {
+      align-items: center;
+
+      .main-title {
+        font-size: 2rem;
+        margin: 20px 0;
+      }
+      .sub-title {
+        font-size: 1.5rem;
+      }
+      .text {
+        text-align: center;
+      }
+    }
   }
-  60% {
-    transform: translateX(-7px);
+
+  .scroll-mouse {
+    display: none;
   }
-  80% {
-    transform: translateX(7px);
-  }
-  100% {
-    transform: translateX(0);
-  }
+}
+
+@media (min-width: 1024px) {
 }
 </style>

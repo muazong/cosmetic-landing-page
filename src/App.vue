@@ -12,4 +12,8 @@ import DetailView from './components/Deltail/DetailView.vue'
   </div>
 </template>
 
-<style scoped></style>
+<style lang="css">
+.container {
+  background-color: #ffffff;
+}
+</style>

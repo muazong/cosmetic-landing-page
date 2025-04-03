@@ -1,9 +1,10 @@
 <script setup lang="ts"></script>
 
 <template>
-  <section id="product-usage-guide">
-    <h1>HƯỚNG DẪN SỬ DỤNG</h1>
-    <div class="product-usage-guide">
+  <div class="component-container product-usage-guide-container detail-component">
+    <h1 class="title">HƯỚNG DẪN SỬ DỤNG</h1>
+
+    <section class="section product-usage-guide">
       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore, ab!</p>
 
       <div class="guide-steps">
@@ -40,24 +41,17 @@
           </p>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </div>
 </template>
 
 <style scoped>
-#product-usage-guide {
-  height: 76vh;
-  width: 100%;
-  padding: 0 40px;
+.product-usage-guide-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
-
-  h1 {
-    font-size: 2rem;
-  }
+  gap: 1rem;
 }
 
 .product-usage-guide {
@@ -71,13 +65,14 @@
   p {
     font-size: 14px;
     color: rgba(0, 0, 0, 0.8);
+    text-align: center;
   }
 
   .guide-steps {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    max-width: 1200px;
+    gap: 18px;
 
     .step {
       gap: 12px;
@@ -86,14 +81,30 @@
       justify-content: center;
       flex-direction: column;
       text-align: center;
+      margin-bottom: 30px;
 
       .step-detail {
         font-size: 13px;
         color: rgba(0, 0, 0, 0.8);
         line-height: 1.5;
-        word-break: break-word;
-        word-wrap: break-word;
+        max-width: 300px;
       }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .product-usage-guide {
+    .guide-steps {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .product-usage-guide {
+    .guide-steps {
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 }

@@ -1,9 +1,9 @@
 <script setup lang="ts"></script>
 
 <template>
-  <section id="product-feature">
-    <h1>BỘT LÀM SÁNG DA VITABRID C12</h1>
-    <div class="product-feature-container">
+  <div class="component-container product-feature-container detail-component">
+    <h1 class="title">BỘT LÀM SÁNG DA VITABRID C12</h1>
+    <section class="section product-feature">
       <div class="information">
         <div class="text">
           <p>
@@ -23,40 +23,63 @@
             trong suốt 12h liên tục.
           </p>
         </div>
-        <img src="@/assets/images/intro.png" alt="intro" />
+        <img class="product-image" src="@/assets/images/intro.png" alt="intro" />
       </div>
-    </div>
-  </section>
+    </section>
+  </div>
 </template>
 
 <style scoped>
-#product-feature {
-  width: 100%;
-  height: 100vh;
+.product-feature-container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 0 40px;
   gap: 3rem;
   background-color: #ffffff;
 }
 
-.product-feature-container {
-  max-width: 1240px;
-
+.product-feature {
   .information {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
 
     .text {
-      max-width: 560px;
       p {
-        line-height: 1.4;
+        line-height: 1.5;
         font-size: 14px;
+        font-weight: 300;
         margin: 16px 0;
         text-align: justify;
+      }
+    }
+
+    .product-image {
+      margin-top: -80px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .product-feature {
+    .information {
+      flex-direction: column;
+
+      .product-image {
+        margin-top: unset;
+        height: 300px;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .product-feature {
+    .information {
+      .product-image {
+        height: 400px;
+        margin-right: -100px;
       }
     }
   }

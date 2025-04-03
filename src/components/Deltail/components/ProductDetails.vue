@@ -1,11 +1,10 @@
 <script setup lang="ts"></script>
 
 <template>
-  <section id="product-details">
-    <h1>ĐẶC TÍNH</h1>
-    <div class="product-details-container">
-      <img src="@/assets/images/dac-tinh.png" alt="features" />
-
+  <div class="component-container product-details-container detail-component">
+    <h1 class="title">ĐẶC TÍNH</h1>
+    <section class="section product-details">
+      <img class="product-image" src="@/assets/images/dac-tinh.png" alt="features" />
       <div class="information">
         <p>
           Bột vitamin C Bột làm sáng da Vitabrid C12 - với công nghệ LDH độc quyền của tập đoàn
@@ -47,14 +46,12 @@
           </li>
         </ul>
       </div>
-    </div>
-  </section>
+    </section>
+  </div>
 </template>
 
 <style scoped>
-#product-details {
-  width: 100%;
-  padding: 0 40px;
+.product-details-container {
   background-color: #fff;
   flex-direction: column;
   display: flex;
@@ -63,7 +60,7 @@
   gap: 2rem;
 }
 
-.product-details-container {
+.product-details {
   max-width: 1240px;
   display: flex;
   align-items: center;
@@ -72,8 +69,8 @@
     max-width: 550px;
 
     p {
-      font-size: 13px;
-      margin-bottom: 12px;
+      font-size: 14px;
+      margin-bottom: 16px;
       text-align: justify;
       line-height: 1.4;
     }
@@ -108,6 +105,24 @@
           }
         }
       }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .product-details {
+    flex-direction: column;
+
+    .product-image {
+      height: 300px;
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .product-details {
+    .product-image {
+      height: 300px;
     }
   }
 }
