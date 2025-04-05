@@ -39,19 +39,6 @@
 </template>
 
 <style scoped>
-.awards-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 2rem;
-
-  .subtitle {
-    font-size: 13px;
-    text-align: center;
-  }
-}
-
 .product-awards {
   .information {
     display: flex;

@@ -7,7 +7,7 @@ import ProductIngredients from './components/ProductIngredients.vue'
 import ProductRatings from './components/ProductRatings.vue'
 import ProductUsageGuide from './components/ProductUsageGuide.vue'
 import SkinCareFeatures from './components/SkinCareFeatures.vue'
-import SkincareResults from './components/SkincareResults.vue'
+import SkinCareResults from './components/SkinCareResults.vue'
 </script>
 
 <template>
@@ -18,10 +18,9 @@ import SkincareResults from './components/SkincareResults.vue'
     <ProductIngredients />
     <ProductBanner />
     <ProductUsageGuide />
-    <SkincareResults />
+    <SkinCareResults />
     <ProductAwards />
-
-    <!-- <ProductRatings /> -->
+    <ProductRatings />
   </section>
 </template>
 

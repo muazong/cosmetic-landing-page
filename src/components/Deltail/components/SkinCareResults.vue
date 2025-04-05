@@ -44,8 +44,8 @@ const images = [
 </template>
 
 <style lang="css">
-/* Đảm bảo Swiper giữ kích thước hợp lý */
 .image-container {
+  margin-top: 40px;
   width: 100%;
   height: auto;
   display: flex;
@@ -53,24 +53,21 @@ const images = [
   align-items: center;
 }
 
-/* Định dạng từng slide */
 .swiper-slide {
-  display: flex !important; /* Căn giữa từng ảnh */
+  display: flex !important;
   justify-content: center !important;
   align-items: center !important;
 }
 
-/* Định dạng ảnh */
 .image-container img {
   width: auto;
   max-width: 100%;
-  height: 300px; /* Điều chỉnh chiều cao */
+  height: 300px;
   max-height: 400px;
   object-fit: cover;
   border-radius: 12px;
 }
 
-/* Điều chỉnh trên mobile */
 @media (max-width: 768px) {
   .image-container img {
     height: 200px;

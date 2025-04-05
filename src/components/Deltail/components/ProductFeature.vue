@@ -79,7 +79,6 @@
     .information {
       .product-image {
         height: 400px;
-        margin-right: -100px;
       }
     }
   }

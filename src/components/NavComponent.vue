@@ -76,6 +76,8 @@ function scrollToSection(event: Event, id: string) {
 <style scoped>
 .nav-container {
   top: 0;
+  right: 0;
+  left: 0;
   position: fixed;
   z-index: 99;
   background: rgba(255, 255, 255, 0.29);
@@ -209,6 +211,7 @@ function scrollToSection(event: Event, id: string) {
 
 @media (max-width: 768px) {
   .nav {
+    padding: 0 20px;
     .nav-btns {
       display: none;
     }

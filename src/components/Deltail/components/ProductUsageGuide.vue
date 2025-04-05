@@ -3,10 +3,9 @@
 <template>
   <div class="component-container product-usage-guide-container detail-component">
     <h1 class="title">HƯỚNG DẪN SỬ DỤNG</h1>
+    <p class="subtitle">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore, ab!</p>
 
     <section class="section product-usage-guide">
-      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore, ab!</p>
-
       <div class="guide-steps">
         <div class="step">
           <img src="@/assets/images/guide.png" alt="step" />
@@ -61,12 +60,6 @@
   align-items: center;
   justify-content: center;
   gap: 2rem;
-
-  p {
-    font-size: 14px;
-    color: rgba(0, 0, 0, 0.8);
-    text-align: center;
-  }
 
   .guide-steps {
     display: grid;

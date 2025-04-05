@@ -3,7 +3,7 @@ import BuyButton from './BuyButton.vue'
 </script>
 
 <template>
-  <div class="product-banner-container detail-component">
+  <div class="component-container product-banner-container detail-component">
     <section class="section product-banner">
       <div class="information">
         <h1 class="title">BỘT LÀM SÁNG DA VITABRID C12</h1>
@@ -25,12 +25,14 @@ import BuyButton from './BuyButton.vue'
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: unset;
 }
 
 .product-banner {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  padding: 0 40px;
 
   img {
     height: 430px;
