@@ -1,14 +1,21 @@
+<script setup lang="ts">
+defineProps<{
+  text?: string
+}>()
+</script>
+
 <template>
   <button class="buy-btn">
     <i class="pi pi-shopping-bag"></i>
-    <p>ĐẶT MUA</p>
+    <p>{{ text ? text : 'ĐẶT MUA' }}</p>
   </button>
 </template>
 
 <style>
 .buy-btn {
   height: 50px;
-  width: 120px;
+  min-width: 120px;
+  padding: 4px 8px;
   background-color: transparent;
   border: 2px solid #ffffff;
   border-radius: 12px;
@@ -18,6 +25,7 @@
   cursor: pointer;
   color: #ffffff;
   position: relative;
+  gap: 4px;
 
   &:hover {
     animation: shake 0.8s ease-in-out;
