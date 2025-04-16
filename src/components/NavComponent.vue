@@ -25,7 +25,7 @@ function scrollToSection(event: Event, id: string) {
   <div class="component-container nav-container">
     <nav class="nav section">
       <h1 class="nav-logo">
-        <a href="#home">VITABRID</a>
+        <a href="#home" @click="scrollToSection($event, 'home')">VITABRID</a>
       </h1>
 
       <ul class="nav-btns">
