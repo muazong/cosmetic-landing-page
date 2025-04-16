@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import DiscountPromotionCard from './components/DiscountPromotionCard.vue'
 import ProductAwards from './components/ProductAwards.vue'
 import ProductBanner from './components/ProductBanner.vue'
 import ProductDetails from './components/ProductDetails.vue'
@@ -21,6 +22,7 @@ import SkinCareResults from './components/SkinCareResults.vue'
     <SkinCareResults />
     <ProductAwards />
     <ProductRatings />
+    <DiscountPromotionCard />
   </section>
 </template>
 
